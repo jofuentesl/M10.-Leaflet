@@ -1,0 +1,19 @@
+body {
+    margin:0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: blueviolet;
+
+}
+.main__block {
+    margin-top: 100px;
+}
+
+.main__map {
+    width: 800px; 
+    height: 400px;
+    background-color: red   ;
+}
