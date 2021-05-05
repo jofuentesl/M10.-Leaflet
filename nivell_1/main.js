@@ -1,5 +1,5 @@
 //codi pel primer mapa nivell 1
-var map = L.map('map').setView([41.387010, 2.170052], 25);
+var map = L.map('map').setView([41.387010, 2.170052], 16);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19,
@@ -8,12 +8,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     zoomOffset: -1,
     accessToken: 'your.mapbox.access.token'
 }).addTo(map);
-                                                                    
+
+L.marker([41.386993,2.170057]).addTo(map);
+
 
 //Codi pel segon mapa nivell 1
-var map2 = L.map('map2').setView([41.386929, 2.165960], 25);
+var map2 = L.map('map2').setView([41.386929, 2.165960], 16);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    /*attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',*/
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19,
     id: 'mapbox/streets-v11',
     tileSize: 512,
@@ -34,4 +36,3 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     accessToken: 'your.mapbox.access.token'
 }).addTo(map3);
 L.marker([41.386929, 2.165960]).bindPopup("<b>Restaurant Centfocs</b></br>Restaurante mediterraneo</br>Carrer Balmes, 16, 08007 Barcelona").addTo(map3).openPopup();
-
