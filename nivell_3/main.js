@@ -18,6 +18,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let marker = L.marker();
+let popup = L.popup();
 function onMapClick(e) {
   //declarem les variables per la ubicació
     let lat  = e.latlng.lat;
@@ -27,10 +28,9 @@ function onMapClick(e) {
       map.removeLayer(marker);
     }
     //col·loquem la nova marca personalitzada
-    marker = new L.marker([lat, lng],{ icon:  fontAwesomeIcon}, 19).addTo(map).bindPopup('Nuevo marcador<br>Latitud: ' + lat +'<br>Longitud: '+ lng);
+    marker = new L.marker([lat, lng],{ icon:  fontAwesomeIcon}, 19).addTo(map).bindPopup('Nuevo marcador<br>Latitud: ' + lat +'<br>Longitud: '+ lng).openPopup();
     //actualitzem la ubicació
     map.flyTo([lat, lng],19)
-    
 }
 
 map.on('click', onMapClick);

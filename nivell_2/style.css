@@ -17,3 +17,6 @@ body {
     height: 400px;
     background-color: red   ;
 }
+.leaflet-popup {
+    bottom: 35px!important;
+}
